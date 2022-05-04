@@ -4,7 +4,7 @@
 
 ### Introduction
 
-This project examines a phenomenon known as the "wisdom of crowds." It analyzes the 126 responses to a [survey](https://forms.gle/nJrzYPWguhfQbg8x5) asking Reddit and Facebook users to guess how many jelly beans are in a pictured glass vase.
+This project examines a phenomenon known as the "wisdom of crowds." It analyzes 126 responses to a [survey](https://forms.gle/nJrzYPWguhfQbg8x5) asking Reddit and Facebook users to guess how many jelly beans are in a pictured glass vase.
 
 This project attempts to answer the following questions:
 
