@@ -1,4 +1,4 @@
-# jellybeans
+# Analyzing Jelly Bean Estimation in Python
 
 ## About The Project
 
@@ -23,22 +23,23 @@ However, individual estimation errors are not always unbiased or centered at the
 
 ### Data
 
-To set up this experiment, 1534 jelly beans were placed in a glass vase. Several pictures of the vase were taken from different angles. These pictures were then compiled with this survey. The survey asks respondents to guess the number of jelly beans in the vase, estimate how many minutes they spent thinking before deciding on their guess, and rating their confidence level in their guess on a scale of 1 to 5, with 1 being not confident at all and 5 being completely confident. The last two questions were designed to measure how "expert" someone's guess was. While there likely aren't many jelly bean estimation experts out in the world, the time spent thinking and the person's subjective confidence level might help identify "expert" guesses. To reduce the chances of non-honest or repeat guesses, Google login was required in order to answer the survey.
+To set up this experiment, 1534 jelly beans were placed in a glass vase. Several pictures of the vase were taken from different angles. These pictures were then compiled with [this survey](https://forms.gle/g2E8YpA53uSoiXcv9). The survey asks respondents to guess the number of jelly beans in the vase, estimate how many minutes they spent thinking before deciding on their guess, and rating their confidence level in their guess on a scale of 1 to 5, with 1 being not confident at all and 5 being completely confident. The last two questions were designed to measure how "expert" someone's guess was. While there likely aren't many jelly bean estimation experts out in the world, the time spent thinking and the person's subjective confidence level might help identify "expert" guesses. To reduce the chances of non-serious or repeat guesses, Google login was required in order to answer the survey.
 
 The survey was posted on the r/SampleSize subreddit on reddit.com and on Facebook, where it gathered 126 responses. The resulting data contains four columns:
 
 * <b>Timestamp:</b> The date and time that a respondent answered the survey.
 * <b>How many jelly beans are in the vase?:</b> The respondent's guess of how many jelly beans are in the vase.
-* <b>To the nearest minute, how many minutes do you estimate you spent thinking before you decided on your guess?:</b> The respondent's estimation of how long they spent thinking before deciding on their guess.
+* <b>To the nearest minute, how many minutes do you estimate you spent thinking before you decided on your guess?:</b> The respondent's estimate of how long they spent thinking before deciding on their guess.
 * <b>On a scale of 1 to 5, with 1 being not confident at all and 5 being completely confident, how confident are you in your guess?:</b> The respondent's rating of their confidence level in their guess.
 
 ### Project Organization and Methodology
 
-To answer the project questions, bootstrap hypothesis tests were performed on both the means and medians of the data. The project code is broken into four parts:
+To answer the project questions, bootstrap hypothesis tests were performed on both the means and medians of the data. The project code is broken into several parts:
 
 * The data folder contains the original data collected from the survey.
-* The cleaning_and eda.ipynb file contains the code used to clean and explore the data, with the goal of focusing on questions and methods for further analysis.
-* The jellybeans.ipynb file contains bootstrap hypothesis tests on the data, as well as discussion of the background, data, methods, and results of the analysis.
+* The cleaning_and eda.ipynb notebook contains the code used to clean and explore the data, with the goal of focusing on questions and methods for further analysis.
+* The jellybeans.ipynb notebook contains bootstrap hypothesis tests on the data, as well as discussion of the background, data, methods, and results of the analysis.
+* The edafuncs.py and jellybeansfunc.py files are modules containing functions used in the project.
 * The requirements.txt contains all the necessary packages and versions to recreate the virtual environment for this project.
 
 ### Results
@@ -49,7 +50,7 @@ Bootstrap hypothesis tests were performed at a significance level of α = 5% on 
 
 1. Kao AB, Berdahl AM, Hartnett AT, Lutz MJ, Bak-Coleman JB, Ioannou CC, Giam X, Couzin ID. 2018 Counteracting estimation bias and social influence to improve the wisdom of crowds. J. R. Soc. Interface 15: 20180130. http://dx.doi.org/10.1098/rsif.2018.0130.
 2. Yong E. January 31, 2013, 'The Real Wisdom of the Crowds'. National Geographic. https://www.nationalgeographic.com/science/article/the-real-wisdom-of-the-crowds.
-3. April 17, 2019, 'How Much Does This Cow Weight?' Planet Money. https://www.npr.org/transcripts/714289051.
+3. April 17, 2019, 'How Much Does This Cow Weigh?' Planet Money. https://www.npr.org/transcripts/714289051.
 4. Easley D, Kleinberg J. Networks, Crowds, and Markets: Reasoning about a Highly Connected World. Cambridge University Press (2010). https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch16.pdf
 5. Jeans J (1968/1937). Science & Music. Dover Publications.
 6. Izard V, Dehaene S. 2008 'Calibrating the mental number line'. Cognition 106, 1221–1247. https://www.unicog.org/publications/IzardDehaene_NumerosityNamingCalibration_Cognition2007.pdf.
